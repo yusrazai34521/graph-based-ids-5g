@@ -7,7 +7,7 @@ This repository contains an end-to-end **graph-based intrusion detection pipelin
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 The goal of this project is to detect network intrusions in 5G traffic by:
 
@@ -21,7 +21,7 @@ This work is suitable for **research, FYPs, and experimental IDS pipelines**.
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 * **Dataset Name:** ITU-ML5G-PS-006
 * **Source:** Zenodo
@@ -30,9 +30,17 @@ This work is suitable for **research, FYPs, and experimental IDS pipelines**.
 
 The dataset contains millions of network flow records designed for **5G/SDN intrusion detection**.
 
+**Citation:**
+
+> Chatzimiltis, S. (2024). *ITU-ML5G-PS-006: Intrusion and Vulnerability Detection in Software-Defined Networks (SDN)* [Dataset]. Zenodo.  
+> https://doi.org/10.5281/zenodo.13939009
+
+The dataset is publicly available on Zenodo and is **not redistributed** in this repository due to size constraints.
+
+
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -40,8 +48,8 @@ The dataset contains millions of network flow records designed for **5G/SDN intr
 ├── graph_construction.py     # Graph building utilities
 ├── graphs/                   # Saved PyTorch Geometric graph objects (.pt)
 ├── models/
-│   ├── graphsage.py          # Large-scale GraphSAGE model
-│   └── gat.py                # Robust GAT model
+│   ├── graphsage          # Large-scale GraphSAGE model
+│   └── gat                # Robust GAT model
 ├── results/
 │   ├── confusion_matrices/   # Saved confusion matrices
 │   └── training_plots/       # Loss / Accuracy / F1 plots
@@ -52,7 +60,7 @@ The dataset contains millions of network flow records designed for **5G/SDN intr
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 This project is designed to run on **Kaggle Notebooks**.
 
@@ -72,14 +80,14 @@ This project is designed to run on **Kaggle Notebooks**.
 
 ---
 
-## 🔧 Setup Instructions (Kaggle)
+## Setup Instructions (Kaggle)
 
-### 1️⃣ Create a Kaggle Notebook
+### Create a Kaggle Notebook
 
 * Go to Kaggle → Notebooks → New Notebook
 * Enable **Internet** access
 
-### 2️⃣ Add Dataset
+### Add Dataset
 
 * Add the dataset manually or via Kaggle Dataset upload
 * Dataset path used in code:
@@ -88,7 +96,8 @@ This project is designed to run on **Kaggle Notebooks**.
 /kaggle/input/itu-ml5g-ps-006/Train_ULAK.csv
 ```
 
-### 3️⃣ Install Required Packages
+
+### Install Required Packages
 
 Run the following in a notebook cell:
 
@@ -99,7 +108,7 @@ Run the following in a notebook cell:
 
 ---
 
-## 🧹 Step 1: Data Preprocessing
+## Step 1: Data Preprocessing
 
 The preprocessing pipeline:
 
@@ -124,7 +133,7 @@ python preprocess_itu_ml5g.py
 
 ---
 
-## 🕸️ Step 2: Graph Construction
+## Step 2: Graph Construction
 
 The system constructs a **bipartite graph**:
 
@@ -150,7 +159,7 @@ Graphs are saved as:
 
 ---
 
-## 🧠 Step 3: Large-Scale GraphSAGE IDS
+## Step 3: Large-Scale GraphSAGE IDS
 
 ### Model Architecture
 
@@ -179,7 +188,7 @@ Graphs are saved as:
 
 ---
 
-## 🧠 Step 4: Graph Attention Network (GAT)
+## Step 4: Graph Attention Network (GAT)
 
 ### Model Features
 
@@ -201,7 +210,7 @@ Graphs are saved as:
 
 ---
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 * Accuracy
 * Precision
@@ -213,7 +222,7 @@ Evaluation is performed **only on flow nodes** (host nodes are masked).
 
 ---
 
-## 🚀 Running the Full Pipeline
+## Running the Full Pipeline
 
 On Kaggle, simply run all notebook cells in order:
 
@@ -227,7 +236,7 @@ On Kaggle, simply run all notebook cells in order:
 
 ---
 
-## 📈 Results (Typical)
+## Results 
 
 * Balanced classification performance
 * Improved anomaly recall using graph context
@@ -237,12 +246,17 @@ Exact results depend on random seeds and sampling.
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Yusra Nadeem**
+**Amna Akram**
+**Saba Bano**
 ---
 
-## 📜 License
+
+## License
 
 This project is intended for **academic and research use** only.
+
+
 
