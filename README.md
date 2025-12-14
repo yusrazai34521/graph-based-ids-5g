@@ -237,22 +237,9 @@ Exact results depend on random seeds and sampling.
 
 ---
 
-## 🔮 Future Work
-
-* Temporal graph construction
-* Real-time inference pipeline
-* Multi-class attack classification
-* Deployment with streaming 5G traffic
-* Comparison with LSTM / CNN baselines
-
----
-
 ## 👩‍💻 Author
 
 **Yusra Nadeem**
-Computer Science Graduate
-Machine Learning & Graph Neural Networks Research
-
 ---
 
 ## 📜 License
