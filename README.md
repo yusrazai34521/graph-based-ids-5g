@@ -248,8 +248,8 @@ Exact results depend on random seeds and sampling.
 
 ## Author
 
-**Yusra Nadeem**
-**Amna Akram**
+**Yusra Nadeem,**
+**Amna Akram and**
 **Saba Bano**
 ---
 
